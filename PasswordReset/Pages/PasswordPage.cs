@@ -23,12 +23,12 @@ using OpenQA.Selenium.Support.UI;
 /// <summary>
 /// The Pages namespace.
 /// </summary>
-namespace PollGeographicCoordinates.Pages
+namespace PasswordResetSelenium.Pages
 {
     /// <summary>
     /// Class LatLongPage.
     /// </summary>
-    class LatLongPage
+    class PasswordPage
     {
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace PollGeographicCoordinates.Pages
         public const int TimeOut = 10;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LatLongPage"/> class.
+        /// Initializes a new instance of the <see cref="PasswordPage"/> class.
         /// </summary>
         /// <param name="driver">The driver.</param>
-        public LatLongPage(IWebDriver driver)
+        public PasswordPage(IWebDriver driver)
         {
             this.Driver = driver;
             PageFactory.InitElements(Driver, this);
@@ -63,7 +63,7 @@ namespace PollGeographicCoordinates.Pages
         /// </summary>
         public void OpenPage()
         {
-            Driver.Navigate().GoToUrl("http://www.latlong.net/");
+            Driver.Navigate().GoToUrl("https://mypassword.trader.ca/");
             Driver.Manage().Window.Maximize();
         }
 
@@ -71,11 +71,13 @@ namespace PollGeographicCoordinates.Pages
         /// Gets the place name field.
         /// </summary>
         /// <value>The place name field.</value>
-        public By PlaceNameField
+        public IWebElement UnlockMyAccountLink
         {
             get
             {
-                return By.CssSelector("#gadres");
+                IList<IWebElement> links = Driver.FindElements(By.TagName("a"));
+                links.First(element => element.Text == "Unlock my Account");
+                return links.First(element => element.Text == "Unlock my Account");
             }
         }
 
