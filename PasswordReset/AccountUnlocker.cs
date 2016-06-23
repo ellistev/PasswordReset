@@ -165,12 +165,11 @@ namespace PasswordResetSelenium
             action.SendKeys(Keys.Enter).Build().Perform();
             Thread.Sleep(1500);
 
-
             action.SendKeys(Keys.Tab).Build().Perform();
             Thread.Sleep(1500);
 
             action.SendKeys(Keys.Enter).Build().Perform();
-            Thread.Sleep(15000);
+            Thread.Sleep(10000);
 
 
 
