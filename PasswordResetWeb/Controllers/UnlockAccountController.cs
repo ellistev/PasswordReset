@@ -16,9 +16,16 @@ namespace PasswordResetWeb.Controllers
         public ActionResult Reset()
         {
 
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
             var proc = Process.Start("c:/reset/PollGeographicCoordinates.exe");
             proc.WaitForExit();
             var exitCode = proc.ExitCode;
+
+
+            // the code that you want to measure comes here
+            watch.Stop();
+            var elapsedSeconds = watch.ElapsedMilliseconds/1000;
 
             string AccountSid = "ACe438f581edceafffdb27daacc6da1b87";
             string AuthToken = "412cd77649e095da11c2b0ff6ac2305b";
@@ -32,7 +39,7 @@ namespace PasswordResetWeb.Controllers
                 "587-600-0677", // From number, must be an SMS-enabled Twilio number
                 "+14039217113",     // To number, if using Sandbox see note above
                                     // message content
-                string.Format("Hey Steve, Account Unlocked!")
+                string.Format("Hey Steve, Account Unlocked, in {0} seconds!", elapsedSeconds)
             );
 
             Response.Write(string.Format("Sent message to Steve"));

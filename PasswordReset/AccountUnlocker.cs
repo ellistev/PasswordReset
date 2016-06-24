@@ -124,52 +124,52 @@ namespace PasswordResetSelenium
             Actions action = new Actions(Driver);
 
             action.SendKeys("selliott").Build().Perform();
-            Thread.Sleep(1500);
+            Thread.Sleep(800);
 
             action.SendKeys(Keys.Tab).Build().Perform();
-            Thread.Sleep(1500);
+            Thread.Sleep(800);
 
             action.SendKeys("BASPINT").Build().Perform();
-            Thread.Sleep(1500);
+            Thread.Sleep(800);
 
             action.SendKeys(Keys.Tab).Build().Perform();
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
+
+            action.SendKeys(Keys.Enter).Build().Perform();
+            Thread.Sleep(4000);
+
+            action.SendKeys("nissan").Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Tab).Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Enter).Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys("blue").Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Tab).Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Enter).Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys("sierra").Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Tab).Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Enter).Build().Perform();
+            Thread.Sleep(800);
+
+            action.SendKeys(Keys.Tab).Build().Perform();
+            Thread.Sleep(800);
 
             action.SendKeys(Keys.Enter).Build().Perform();
             Thread.Sleep(5000);
-
-            action.SendKeys("nissan").Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Tab).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Enter).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys("blue").Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Tab).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Enter).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys("sierra").Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Tab).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Enter).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Tab).Build().Perform();
-            Thread.Sleep(1500);
-
-            action.SendKeys(Keys.Enter).Build().Perform();
-            Thread.Sleep(10000);
 
 
 
