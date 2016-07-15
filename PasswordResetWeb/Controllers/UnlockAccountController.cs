@@ -16,6 +16,11 @@ namespace PasswordResetWeb.Controllers
         public ActionResult Reset()
         {
 
+            if (Request["key"] != "unlock")
+            {
+                return Content("no password, dumb dumb");
+            }
+
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
             var proc = Process.Start("c:/reset/PollGeographicCoordinates.exe");
