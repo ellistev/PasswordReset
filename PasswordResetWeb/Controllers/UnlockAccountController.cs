@@ -32,8 +32,8 @@ namespace PasswordResetWeb.Controllers
             watch.Stop();
             var elapsedSeconds = watch.ElapsedMilliseconds/1000;
 
-            string AccountSid = "ACe438f581edceafffdb27daacc6da1b87";
-            string AuthToken = "412cd77649e095da11c2b0ff6ac2305b";
+            string AccountSid = "";
+            string AuthToken = "";
 
             // instantiate a new Twilio Rest Client
             var client = new TwilioRestClient(AccountSid, AuthToken);
